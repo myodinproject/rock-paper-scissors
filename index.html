@@ -1,34 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Rock Paper Scissors</h1>
+  </header>
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <main>
+    <div id="game-container">
+      <div id="game-info">
+        <div class="player-info">
+          <h3>Player:</h3>
+          <p id="player-score">0</p>
+        </div>
+        <div id="gameboard">
+          <h2 id="winner-info"></h2>
+          <button id="new-game-btn">New Game</button>
+          <div id="round-picks"></div>
+        </div>
+        <div class="player-info">
+          <h3>Computer:</h3>
+          <p id="computer-score">0</p>
+        </div>
+      </div>
+      <div id="player-controls">
+        <h3>Pick your next move</h3>
+        <div id="picks-list">
+          <img id="rock-icon">
+          <img id="paper-icon">
+          <img id="scissors-icon">
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <p>Made with ❤ by <a href="https://github.com/gonzalobarreiro" target="_blank">gonzalobarreiro</a></p>
+  </footer>
 
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
-
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-        <!-- Main CSS -->
-        <link rel="stylesheet" href="/css/style.css">
-
-        <title>Rock, Paper, Scissors</title>
-    </head>
-    <body>
-        
-
-        <!-- jQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-        <!-- Bootstrap Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-    
-        <script src="./js/script.js"></script>
-    </body>
+  <script src="./js/script.js"></script>
+</body>
 </html>

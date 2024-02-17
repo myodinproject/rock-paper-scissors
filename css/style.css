@@ -1,0 +1,144 @@
+:root {
+  --primary-light: #ddd;
+  --primary-dark: #222831;
+  --secondary-dark: #393e46;
+  --secondary-dark-hover: #4a4f57;
+  --secondary-dark-active: #5b5f68;
+  --header: #111720;
+  --primary-yellow: #fac650;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+}
+
+header,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--primary-light);
+}
+
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+#game-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+#gameboard {
+  width: 480px;
+  height: 270px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  background-color: var(--primary-dark);
+}
+
+#game-container.playing #gameboard {
+  background-color: var(--secondary-dark);
+}
+
+#round-picks {
+  display: none;
+}
+#game-container.playing #round-picks {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#new-game-btn {
+  display: block;
+}
+
+#game-container.playing #new-game-btn {
+  display: none;
+}
+
+#new-game-btn {
+  padding: 16px 24px;
+  background-color: var(--secondary-dark);
+  color: var(--primary-light);
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#new-game-btn:hover {
+  background-color: var(--secondary-dark-hover);
+}
+
+.player-pick-icon {
+  transform: rotate(90deg);
+}
+
+.computer-pick-icon {
+  transform: rotate(90deg) scaleY(-1);
+}
+
+.player-info {
+  width: 120px;
+  text-align: center;
+}
+
+#player-controls {
+  display: none;
+}
+
+#game-container.playing #player-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+#picks-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+#rock-icon,
+#paper-icon,
+#scissors-icon {
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+footer a {
+  color: var(--primary-light);
+  text-decoration: none;
+  transition: color 0.2s;
+}
